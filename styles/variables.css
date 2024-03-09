@@ -1,4 +1,11 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --display-decorative: block;
+  --color-hover: #FF007066;
+  --color-title: #DB00FF;
+  --color-text: #F1B2CE;
+  --accent-color: #FF0070;
+  --bg-color: #000028;
+  --size-text: 18px;
+  --bg-img: url(../images/cover-image-dark.png);
+  --bg-img-avif: url(../images/cover-image-dark.avif);
+}

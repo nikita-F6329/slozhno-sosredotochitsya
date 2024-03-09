@@ -1,5 +1,323 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  padding-inline: clamp(10px, calc(10 / 375 * 100vw), 20px);
+  color: var(--color-text);
+  font-family: 'IBM Plex mono';
+  line-height: 23.4px;
+  background-color: var(--bg-color);
+  background-image: var(--bg-img);
+  background-image: -webkit-image-set(
+    var(--bg-img-avif),
+    var(--bg-img));
+    background-image: image-set(
+      var(--bg-img-avif),
+      var(--bg-img));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.holder-content {
+  padding-block: clamp(10px, calc(10 / 375 * 100vw), 20px);
+  block-size: 100vh;
+}
+
+.ident-section {
+  margin-block-end: clamp(40px, calc(40 / 375 * 100vw), 60px);
+}
+
+.text {
+  font-size: var(--size-text);
+}
+
+.text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-link:hover {
+  border-block-end: 1px solid var(--color-text);
+}
+
+.text-link:focus-visible {
+  outline: 1px solid var(--color-text);
+}
+
+.text-decor {
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+}
+
+.container {
+  margin-block-end: clamp(50px, calc(50 / 375 * 100vw), 80px);
+}
+
+.subtitle {
+  color: var(--bg-color);
+  font-weight: 700;
+  font-size: var(--size-text);
+}
+
+.subtitle-ident-end {
+  margin-block-end: 10px;
+}
+
+.block-end:not(:last-child) {
+  margin-block-end: 20px;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+ .decorated-zone::before {
+  content: "";
+  position: absolute;
+  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--accent-color);
+  inset-inline-end: 0;
+  inset-block-start: clamp(10px, calc(10 / 375 * 100vw), 20px);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
+  inset-inline-start: 0;
+  inset-block-end: clamp(10px, calc(10 / 375 * 100vw), 20px);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__theme-menu-button {
+  padding-inline: 13px;
+  padding-block-end: 3.5px;
+  line-height: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--color-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.heading {
+  color: var(--color-title);
+  font-weight: 700;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  line-height: 81%;
+}
+
+.header__title {
+  position: relative;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  inset-inline-end: 20px;
+}
+
+.header__paragraph {
+  justify-self: end;
+  align-self: center;
+  width: 49.9%;
+  color: var(--bg-color);
+  font-weight: 700;
+}
+
+.header__decorative-element {
+  position: absolute;
+  display: var(--display-decorative);
+  inset-block-start: clamp(0px, calc(10 / 375 * 100vw), 20px);
+  inset-inline-end: 0;
+}
+
+.header__decorative-element::before {
+  content: "REC";
+  display: inline-block;
+  margin-inline-end: 8px;
+  color: var(--accent-color);
+  font-size: var(--size-text);
+}
+
+.header__decorative-element::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-inline-end: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.first-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.second-section__title {
+  margin-block-end: 20px;
+  inline-size: 30%;
+}
+
+.second-section__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.third-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.third-section__list-item > h4 {
+  font-weight: 400;
+}
+
+.section-gallery__title {
+  margin-block-end: clamp(10px, calc(10 / 375 * 100vw), 20px);
+}
+
+.section-gallery__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "sunset sunset cream"
+    "tape books cream"
+    "tape street street";
+  gap: 20px;
+}
+
+.section-gallery__sunset {
+  grid-area: sunset;
+}
+
+.section-gallery__cream {
+  grid-area: cream;
+}
+
+.section-gallery__tape {
+  grid-area: tape;
+}
+
+.section-gallery__books {
+  grid-area: books;
+}
+
+.section-gallery__street {
+  grid-area: street;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__text {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__theme-menu {
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .second-section__row {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-gap {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .second-section__row-block:not(:last-child) {
+    margin-block-end: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__title {
+    inset: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .second-section__title {
+    inline-size: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .content-gap {
+    display: block;
+  }
+}
+
+@media (max-width: 375px) {
+  .header__paragraph {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .section-gallery__list-item {
+    margin-block-end: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .title-ident-end {
+    margin-block-end: 20px;
+  }
 }

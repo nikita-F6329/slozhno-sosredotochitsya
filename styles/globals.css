@@ -39,4 +39,11 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  border: none;
+}
+
+img {
+  display: block;
+  block-size: 100%;
+  inline-size: 100%;
 }
