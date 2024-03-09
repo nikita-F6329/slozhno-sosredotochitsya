@@ -5,7 +5,6 @@
   --accent-color: #FF8DCB;
   --bg-color: #FFF1F7;
   --bg-img: url(../images/cover-image-light.png);
-  --bg-img-avif: url(../images/cover-image-light.avif);
   --display-decorative: none;
 }
 
@@ -18,6 +17,5 @@
     --accent-color: #FF8DCB;
     --bg-color: #FFF1F7;
     --bg-img: url(../images/cover-image-light.png);
-    --bg-img-avif: url(../images/cover-image-light.avif); 
     }
 }
