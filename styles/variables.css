@@ -1,10 +1,21 @@
 :root {
+  --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --display-decorative: block;
   --color-hover: #FF007066;
   --color-title: #DB00FF;
   --color-text: #F1B2CE;
   --accent-color: #FF0070;
   --bg-color: #000028;
+  --focus-color: var(--accent-color);
+  --main-text-color: #353430;
+  --heading-color: var(--accent-color);
+  --subtitle-color: var(--bg-color);
   --size-text: 18px;
   --bg-img: url(../images/cover-image-dark.png);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }

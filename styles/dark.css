@@ -5,5 +5,9 @@
   --color-text: #F1B2CE;
   --accent-color: #FF0070;
   --bg-color: #000028;
+  --focus-color: var(--accent-color);
+  --main-text-color: #353430;
+  --heading-color: var(--accent-color);
+  --subtitle-color: var(--bg-color);
   --bg-img: url(../images/cover-image-dark.png);
 }
