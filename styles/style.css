@@ -36,9 +36,6 @@
 
 .text-link:focus-visible {
   outline: none;
-}
-
-.text-link:focus-visible {
   outline: 1px solid var(--color-text);
 }
 
@@ -123,11 +120,7 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--focus-color);
-  outline: none;
 }
 
 .heading {
